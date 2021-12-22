@@ -3,16 +3,13 @@
 #Set the PAT and Organization name in the params
 
 
-$PAT = "ozpo6wztkznw4f3kz735pjojgtb2ji6xylomkgbompx4t46vsr2a"
 $Organization = "https://vsrm.dev.azure.com/sugamgupta/Git-Training/"
 $ApiVersion = '6.0'
 $DefinitionId = '4'
  
 function Get-Authentication {
         Write-Host "Initialize authentication context"
-
-        $Token = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes(":$($PAT)"))
-        $Header = @{authorization = "Basic $Token"}
+        $Header = @{authorization = "Bearer $env:SYSTEM_ACCESSTOKEN"}
         return $Header
 }
 
