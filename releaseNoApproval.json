@@ -1,0 +1,283 @@
+{
+    "source": "userInterface",
+    "revision": 6,
+    "description": null,
+    "createdBy": {
+        "displayName": "Sugam Gupta",
+        "url": "https://spsprodsin1.vssps.visualstudio.com/A6990ce69-30be-4e93-881e-35cefa3af3c9/_apis/Identities/2a77cd78-59d8-6d28-8181-3bd66af2002f",
+        "_links": {
+            "avatar": {
+                "href": "https://dev.azure.com/sugamgupta/_apis/GraphProfile/MemberAvatars/aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm"
+            }
+        },
+        "id": "2a77cd78-59d8-6d28-8181-3bd66af2002f",
+        "uniqueName": "sugamgupta@microsoft.com",
+        "imageUrl": "https://dev.azure.com/sugamgupta/_apis/GraphProfile/MemberAvatars/aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm",
+        "descriptor": "aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm"
+    },
+    "createdOn": "2021-07-28T23:36:46.02Z",
+    "modifiedBy": {
+        "displayName": "Sugam Gupta",
+        "url": "https://spsprodsin1.vssps.visualstudio.com/A6990ce69-30be-4e93-881e-35cefa3af3c9/_apis/Identities/2a77cd78-59d8-6d28-8181-3bd66af2002f",
+        "_links": {
+            "avatar": {
+                "href": "https://dev.azure.com/sugamgupta/_apis/GraphProfile/MemberAvatars/aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm"
+            }
+        },
+        "id": "2a77cd78-59d8-6d28-8181-3bd66af2002f",
+        "uniqueName": "sugamgupta@microsoft.com",
+        "imageUrl": "https://dev.azure.com/sugamgupta/_apis/GraphProfile/MemberAvatars/aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm",
+        "descriptor": "aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm"
+    },
+    "modifiedOn": "2021-12-20T20:32:57.05Z",
+    "isDeleted": false,
+    "lastRelease": {
+        "id": 19,
+        "name": "Release-3",
+        "artifacts": [],
+        "_links": {},
+        "description": "",
+        "releaseDefinition": {
+            "id": 4,
+            "projectReference": null,
+            "_links": {}
+        },
+        "createdOn": "2021-07-29T00:01:53.427Z",
+        "createdBy": {
+            "displayName": "Sugam Gupta",
+            "url": "https://spsprodsin1.vssps.visualstudio.com/A6990ce69-30be-4e93-881e-35cefa3af3c9/_apis/Identities/2a77cd78-59d8-6d28-8181-3bd66af2002f",
+            "_links": {
+                "avatar": {
+                    "href": "https://dev.azure.com/sugamgupta/_apis/GraphProfile/MemberAvatars/aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm"
+                }
+            },
+            "id": "2a77cd78-59d8-6d28-8181-3bd66af2002f",
+            "uniqueName": "sugamgupta@microsoft.com",
+            "imageUrl": "https://dev.azure.com/sugamgupta/_apis/GraphProfile/MemberAvatars/aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm",
+            "descriptor": "aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm"
+        }
+    },
+    "variables": {},
+    "variableGroups": [],
+    "environments": [
+        {
+            "id": 6,
+            "name": "MyStage",
+            "rank": 1,
+            "owner": {
+                "displayName": "Sugam Gupta",
+                "url": "https://spsprodsin1.vssps.visualstudio.com/A6990ce69-30be-4e93-881e-35cefa3af3c9/_apis/Identities/2a77cd78-59d8-6d28-8181-3bd66af2002f",
+                "_links": {
+                    "avatar": {
+                        "href": "https://dev.azure.com/sugamgupta/_apis/GraphProfile/MemberAvatars/aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm"
+                    }
+                },
+                "id": "2a77cd78-59d8-6d28-8181-3bd66af2002f",
+                "uniqueName": "sugamgupta@microsoft.com",
+                "imageUrl": "https://dev.azure.com/sugamgupta/_apis/GraphProfile/MemberAvatars/aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm",
+                "descriptor": "aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm"
+            },
+            "variables": {},
+            "variableGroups": [],
+            "preDeployApprovals": {
+                "approvals": [
+                    {
+                        "rank": 1,
+                        "isAutomated": true,
+                        "isNotificationOn": false,
+                        "approver": {
+                            "displayName": "Sugam Gupta",
+                            "url": "https://spsprodsin1.vssps.visualstudio.com/A6990ce69-30be-4e93-881e-35cefa3af3c9/_apis/Identities/2a77cd78-59d8-6d28-8181-3bd66af2002f",
+                            "_links": {
+                                "avatar": {
+                                    "href": "https://dev.azure.com/sugamgupta/_apis/GraphProfile/MemberAvatars/aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm"
+                                }
+                            },
+                            "id": "2a77cd78-59d8-6d28-8181-3bd66af2002f",
+                            "uniqueName": "sugamgupta@microsoft.com",
+                            "imageUrl": "https://dev.azure.com/sugamgupta/_apis/GraphProfile/MemberAvatars/aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm",
+                            "descriptor": "aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm"
+                        },
+                        "id": ""
+                    }
+                ],
+                "approvalOptions": {
+                    "requiredApproverCount": null,
+                    "releaseCreatorCanBeApprover": true,
+                    "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+                    "enforceIdentityRevalidation": false,
+                    "timeoutInMinutes": 0,
+                    "executionOrder": "beforeGates"
+                }
+            },
+            "deployStep": {
+                "id": 17
+            },
+            "postDeployApprovals": {
+                "approvals": [
+                    {
+                        "rank": 1,
+                        "isAutomated": true,
+                        "isNotificationOn": false,
+                        "id": 18
+                    }
+                ],
+                "approvalOptions": {
+                    "requiredApproverCount": null,
+                    "releaseCreatorCanBeApprover": false,
+                    "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+                    "enforceIdentityRevalidation": false,
+                    "timeoutInMinutes": 0,
+                    "executionOrder": "afterSuccessfulGates"
+                }
+            },
+            "deployPhases": [
+                {
+                    "deploymentInput": {
+                        "parallelExecution": {
+                            "parallelExecutionType": "none"
+                        },
+                        "agentSpecification": null,
+                        "skipArtifactsDownload": false,
+                        "artifactsDownloadInput": {
+                            "downloadInputs": []
+                        },
+                        "queueId": 48,
+                        "demands": [],
+                        "enableAccessToken": false,
+                        "timeoutInMinutes": 0,
+                        "jobCancelTimeoutInMinutes": 1,
+                        "condition": "succeeded()",
+                        "overrideInputs": {}
+                    },
+                    "rank": 1,
+                    "phaseType": "agentBasedDeployment",
+                    "name": "Agent job",
+                    "refName": null,
+                    "workflowTasks": [
+                        {
+                            "environment": {},
+                            "taskId": "e213ff0f-5d5c-4791-802d-52ea3e7be1f1",
+                            "version": "2.*",
+                            "name": "PowerShell Script",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "targetType": "inline",
+                                "filePath": "",
+                                "arguments": "",
+                                "script": "workflow Test-Workflow\n{\n    $variable = 1..500\n\n    ForEach -Parallel ($v in $variable)\n    {\n        \n        Write-output \"Hello $v\"\n    }\n    \n}\n\nTest-Workflow\n",
+                                "errorActionPreference": "stop",
+                                "warningPreference": "default",
+                                "informationPreference": "default",
+                                "verbosePreference": "default",
+                                "debugPreference": "default",
+                                "failOnStderr": "false",
+                                "showWarnings": "false",
+                                "ignoreLASTEXITCODE": "false",
+                                "pwsh": "false",
+                                "workingDirectory": "",
+                                "runScriptInSeparateScope": "false"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "environmentOptions": {
+                "emailNotificationType": "OnlyOnFailure",
+                "emailRecipients": "release.environment.owner;release.creator",
+                "skipArtifactsDownload": false,
+                "timeoutInMinutes": 0,
+                "enableAccessToken": false,
+                "publishDeploymentStatus": true,
+                "badgeEnabled": false,
+                "autoLinkWorkItems": false,
+                "pullRequestDeploymentEnabled": false
+            },
+            "demands": [],
+            "conditions": [
+                {
+                    "name": "ReleaseStarted",
+                    "conditionType": "event",
+                    "value": ""
+                }
+            ],
+            "executionPolicy": {
+                "concurrencyCount": 1,
+                "queueDepthCount": 0
+            },
+            "schedules": [],
+            "currentRelease": {
+                "id": 19,
+                "url": "https://vsrm.dev.azure.com/sugamgupta/4c421ea2-4f4a-4453-807d-1bf55a3252d5/_apis/Release/releases/19",
+                "_links": {}
+            },
+            "retentionPolicy": {
+                "daysToKeep": 30,
+                "releasesToKeep": 3,
+                "retainBuild": true
+            },
+            "processParameters": {},
+            "properties": {
+                "BoardsEnvironmentType": {
+                    "$type": "System.String",
+                    "$value": "unmapped"
+                },
+                "LinkBoardsWorkItems": {
+                    "$type": "System.String",
+                    "$value": "False"
+                }
+            },
+            "preDeploymentGates": {
+                "id": 0,
+                "gatesOptions": null,
+                "gates": []
+            },
+            "postDeploymentGates": {
+                "id": 0,
+                "gatesOptions": null,
+                "gates": []
+            },
+            "environmentTriggers": [],
+            "badgeUrl": "https://vsrm.dev.azure.com/sugamgupta/_apis/public/Release/badge/4c421ea2-4f4a-4453-807d-1bf55a3252d5/4/6"
+        }
+    ],
+    "artifacts": [],
+    "triggers": [],
+    "releaseNameFormat": "Release-$(rev:r)",
+    "tags": [],
+    "properties": {
+        "DefinitionCreationSource": {
+            "$type": "System.String",
+            "$value": "ReleaseNew"
+        },
+        "IntegrateBoardsWorkItems": {
+            "$type": "System.String",
+            "$value": "False"
+        },
+        "IntegrateJiraWorkItems": {
+            "$type": "System.String",
+            "$value": "false"
+        }
+    },
+    "id": 4,
+    "name": "Workflow test",
+    "path": "\\",
+    "projectReference": null,
+    "url": "https://vsrm.dev.azure.com/sugamgupta/4c421ea2-4f4a-4453-807d-1bf55a3252d5/_apis/Release/definitions/4",
+    "_links": {
+        "self": {
+            "href": "https://vsrm.dev.azure.com/sugamgupta/4c421ea2-4f4a-4453-807d-1bf55a3252d5/_apis/Release/definitions/4"
+        },
+        "web": {
+            "href": "https://dev.azure.com/sugamgupta/4c421ea2-4f4a-4453-807d-1bf55a3252d5/_release?definitionId=4"
+        }
+    }
+}
