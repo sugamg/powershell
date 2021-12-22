@@ -52,11 +52,11 @@ param ( $FilePath )
 Write-Host "checking isAutomated"
 If($ReleaseDefinition.environments.preDeployApprovals.approvals.isAutomated){
     Write-Host "Reading from Json File"
-    $JsonFile = Get-jsonFile -FilePath "C:\Users\sugamgupta\OneDrive - Microsoft\Documents\release.json"
+    $JsonFile = Get-jsonFile -FilePath ".\release.json"
 }
 else{
     Write-Host "Reading from Json File"
-    $JsonFile = Get-jsonFile -FilePath "C:\Users\sugamgupta\OneDrive - Microsoft\Documents\releaseNoApproval.json"
+    $JsonFile = Get-jsonFile -FilePath ".\releaseNoApproval.json"
 }
 
 Write-Host "Updating revision on Json"
