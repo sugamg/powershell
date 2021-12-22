@@ -71,7 +71,7 @@ function Update-ReleaseDefinition {
         try 
         {
             $ReleaseJson
-            $Response = Invoke-RestMethod -Uri $Uri -Method Put -Headers $Header -ContentType "application/json" -Body ([System.Text.Encoding]::UTF8.GetBytes($ReleaseJ)) -UseBasicParsing
+            $Response = Invoke-RestMethod -Uri $Uri -Method Put -Headers $Header -ContentType "application/json" -Body ([System.Text.Encoding]::UTF8.GetBytes($ReleaseJson)) -UseBasicParsing
         } 
         catch 
         {
