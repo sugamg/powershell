@@ -5,7 +5,7 @@
 
 $Organization = "https://vsrm.dev.azure.com/sugamgupta/Git-Training/"
 $ApiVersion = '6.0'
-$DefinitionId = '4'
+$DefinitionId = 4
  
 function Get-Authentication {
         Write-Host "Initialize authentication context"
