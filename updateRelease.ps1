@@ -51,16 +51,17 @@ param ( $FilePath )
 
 Write-Host "checking isAutomated"
 If($ReleaseDefinition.environments.preDeployApprovals.approvals.isAutomated){
-    Write-Host "Reading from Json File"
+    Write-Host "Approvals not present in release definition. Will Add now."
     $JsonFile = Get-jsonFile -FilePath ".\release.json"
 }
 else{
-    Write-Host "Reading from Json File"
+    Write-Host "Approvals already present in release definition. Removing approvals."
     $JsonFile = Get-jsonFile -FilePath ".\releaseNoApproval.json"
 }
 
-Write-Host "Updating revision on Json"
+Write-Host "Updating revision on Json. Current revision is $ReleaseDefinition.revision"
 $JsonFile.revision = $ReleaseDefinition.revision
+Write-Host "Revision set to $JsonFile.revision on Json file"
 $JsonFile = $JsonFile | ConvertTo-Json -Depth 50
 
 function Update-ReleaseDefinition {
