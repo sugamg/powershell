@@ -1,6 +1,6 @@
 {
     "source": "userInterface",
-    "revision": 6,
+    "revision": 27,
     "description": null,
     "createdBy": {
         "displayName": "Sugam Gupta",
@@ -11,8 +11,8 @@
             }
         },
         "id": "2a77cd78-59d8-6d28-8181-3bd66af2002f",
-        "uniqueName": "sugamgupta@microsoft.com",
-        "imageUrl": "https://dev.azure.com/sugamgupta/_apis/GraphProfile/MemberAvatars/aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm",
+        "uniqueName": null,
+        "imageUrl": null,
         "descriptor": "aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm"
     },
     "createdOn": "2021-07-28T23:36:46.02Z",
@@ -25,15 +25,15 @@
             }
         },
         "id": "2a77cd78-59d8-6d28-8181-3bd66af2002f",
-        "uniqueName": "sugamgupta@microsoft.com",
-        "imageUrl": "https://dev.azure.com/sugamgupta/_apis/GraphProfile/MemberAvatars/aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm",
+        "uniqueName": null,
+        "imageUrl": null,
         "descriptor": "aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm"
     },
-    "modifiedOn": "2021-12-20T20:32:57.05Z",
+    "modifiedOn": "2021-12-30T20:42:31.883Z",
     "isDeleted": false,
     "lastRelease": {
-        "id": 19,
-        "name": "Release-3",
+        "id": 34,
+        "name": "Release-12",
         "artifacts": [],
         "_links": {},
         "description": "",
@@ -42,7 +42,7 @@
             "projectReference": null,
             "_links": {}
         },
-        "createdOn": "2021-07-29T00:01:53.427Z",
+        "createdOn": "2021-12-28T20:19:30.48Z",
         "createdBy": {
             "displayName": "Sugam Gupta",
             "url": "https://spsprodsin1.vssps.visualstudio.com/A6990ce69-30be-4e93-881e-35cefa3af3c9/_apis/Identities/2a77cd78-59d8-6d28-8181-3bd66af2002f",
@@ -52,8 +52,8 @@
                 }
             },
             "id": "2a77cd78-59d8-6d28-8181-3bd66af2002f",
-            "uniqueName": "sugamgupta@microsoft.com",
-            "imageUrl": "https://dev.azure.com/sugamgupta/_apis/GraphProfile/MemberAvatars/aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm",
+            "uniqueName": null,
+            "imageUrl": null,
             "descriptor": "aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm"
         }
     },
@@ -73,8 +73,8 @@
                     }
                 },
                 "id": "2a77cd78-59d8-6d28-8181-3bd66af2002f",
-                "uniqueName": "sugamgupta@microsoft.com",
-                "imageUrl": "https://dev.azure.com/sugamgupta/_apis/GraphProfile/MemberAvatars/aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm",
+                "uniqueName": null,
+                "imageUrl": null,
                 "descriptor": "aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm"
             },
             "variables": {},
@@ -85,25 +85,12 @@
                         "rank": 1,
                         "isAutomated": true,
                         "isNotificationOn": false,
-                        "approver": {
-                            "displayName": "Sugam Gupta",
-                            "url": "https://spsprodsin1.vssps.visualstudio.com/A6990ce69-30be-4e93-881e-35cefa3af3c9/_apis/Identities/2a77cd78-59d8-6d28-8181-3bd66af2002f",
-                            "_links": {
-                                "avatar": {
-                                    "href": "https://dev.azure.com/sugamgupta/_apis/GraphProfile/MemberAvatars/aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm"
-                                }
-                            },
-                            "id": "2a77cd78-59d8-6d28-8181-3bd66af2002f",
-                            "uniqueName": "sugamgupta@microsoft.com",
-                            "imageUrl": "https://dev.azure.com/sugamgupta/_apis/GraphProfile/MemberAvatars/aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm",
-                            "descriptor": "aad.MmE3N2NkNzgtNTlkOC03ZDI4LTgxODEtM2JkNjZhZjIwMDJm"
-                        },
                         "id": ""
                     }
                 ],
                 "approvalOptions": {
                     "requiredApproverCount": null,
-                    "releaseCreatorCanBeApprover": true,
+                    "releaseCreatorCanBeApprover": false,
                     "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
                     "enforceIdentityRevalidation": false,
                     "timeoutInMinutes": 0,
@@ -137,12 +124,14 @@
                         "parallelExecution": {
                             "parallelExecutionType": "none"
                         },
-                        "agentSpecification": null,
+                        "agentSpecification": {
+                            "identifier": "ubuntu-latest"
+                        },
                         "skipArtifactsDownload": false,
                         "artifactsDownloadInput": {
                             "downloadInputs": []
                         },
-                        "queueId": 48,
+                        "queueId": 29,
                         "demands": [],
                         "enableAccessToken": false,
                         "timeoutInMinutes": 0,
@@ -186,6 +175,30 @@
                                 "workingDirectory": "",
                                 "runScriptInSeparateScope": "false"
                             }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "6c731c3c-3c68-459a-a5c9-bde6e6595b5b",
+                            "version": "3.*",
+                            "name": "Bash Script",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "targetType": "inline",
+                                "filePath": "",
+                                "arguments": "",
+                                "script": "terraform -version\n",
+                                "workingDirectory": "",
+                                "failOnStderr": "false",
+                                "bashEnvValue": ""
+                            }
                         }
                     ]
                 }
@@ -215,8 +228,8 @@
             },
             "schedules": [],
             "currentRelease": {
-                "id": 19,
-                "url": "https://vsrm.dev.azure.com/sugamgupta/4c421ea2-4f4a-4453-807d-1bf55a3252d5/_apis/Release/releases/19",
+                "id": 34,
+                "url": "https://vsrm.dev.azure.com/sugamgupta/4c421ea2-4f4a-4453-807d-1bf55a3252d5/_apis/Release/releases/34",
                 "_links": {}
             },
             "retentionPolicy": {
