@@ -59,9 +59,9 @@ else{
     $JsonFile = Get-jsonFile -FilePath ".\releaseNoApproval.json"
 }
 
-Write-Host "Updating revision on Json. Current revision is $ReleaseDefinition.revision"
+Write-Host "Updating revision on Json. Current revision is $($ReleaseDefinition.revision)"
 $JsonFile.revision = $ReleaseDefinition.revision
-Write-Host "Revision set to $JsonFile.revision on Json file"
+Write-Host "Revision set to $($JsonFile.revision) on Json file"
 $JsonFile = $JsonFile | ConvertTo-Json -Depth 50
 
 function Update-ReleaseDefinition {
