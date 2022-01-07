@@ -1,0 +1,3 @@
+{
+  "git://PATTOKEN/github.com"
+}
