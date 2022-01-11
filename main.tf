@@ -1,3 +1,3 @@
 {
-  "git://PATTOKEN/github.com"
+  "git://#{PATTOKEN}#/github.com"
 }
