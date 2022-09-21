@@ -1,0 +1,32 @@
+trigger:
+ branches:
+   include:
+     - release*
+
+pr:
+  branches:
+    include:
+     - master
+  paths:
+    exclude:
+    - README.md
+
+resources:
+  repositories:
+    # - repository: MlApp
+    #   type: githubenterprise
+    #   name: gsk-tech/si-template
+    #   endpoint: GSK GitHub xox87765 OAuth
+    #   ref: main
+    - repository: MlOps
+      type: githubenterprise
+      name: gsk-tech/si-ml-ops
+      endpoint: GSK GitHub xox87765 OAuth
+      ref: main
+
+steps
+
+
+#stages:          
+# Call the stages in the MlOps repo
+#    - template: databricks-ml/pipelines/stages/mlops-main-stage.yml@MlOps  # Template reference
