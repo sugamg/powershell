@@ -32,4 +32,4 @@ steps:
 
 #stages:          
 # Call the stages in the MlOps repo
-#    - template: databricks-ml/pipelines/stages/mlops-main-stage.yml@MlOps  # Template reference
+#    - template: databricks-ml/pipelines/stages/mlops-main-stage.yml@MlOps  # Template reference 
