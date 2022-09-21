@@ -17,17 +17,12 @@ resources:
       type: github
       name: sugamg/pipeline-docker
       endpoint: MyGit
-      ref: main
+      ref: master
     - repository: MlOps
       type: github
       name: sugamg/powershell
       endpoint: MyGit
       ref: $(Build.SourceBranch)
 
-steps:
-- checkout: MlOps
-- script: echo $(Build.SourceBranch)
-
-
-
-- template: mlops-main-stage.yml@MlOps  # Template reference 
+extends:
+  template: mlops-main-stage.yml@MlApp  # Template reference 
