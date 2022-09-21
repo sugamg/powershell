@@ -13,11 +13,11 @@ pr:
 
 resources:
   repositories:
-    # - repository: MlApp
-    #   type: githubenterprise
-    #   name: gsk-tech/si-template
-    #   endpoint: GSK GitHub xox87765 OAuth
-    #   ref: main
+    - repository: MlApp
+      type: github
+      name: sugamg/pipeline-docker
+      endpoint: MyGit
+      ref: main
     - repository: MlOps
       type: github
       name: sugamg/powershell
@@ -30,6 +30,6 @@ steps:
 
 
 
-#stages:          
+stages:          
 # Call the stages in the MlOps repo
-#    - template: databricks-ml/pipelines/stages/mlops-main-stage.yml@MlOps  # Template reference 
+ - template: mlops-main-stage.yml@MlOps  # Template reference 
