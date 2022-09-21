@@ -6,7 +6,7 @@ trigger:
 pr:
   branches:
     include:
-     - master
+     - main
   paths:
     exclude:
     - README.md
@@ -19,12 +19,13 @@ resources:
     #   endpoint: GSK GitHub xox87765 OAuth
     #   ref: main
     - repository: MlOps
-      type: githubenterprise
-      name: gsk-tech/si-ml-ops
-      endpoint: GSK GitHub xox87765 OAuth
+      type: github
+      name: sugamg/powershell
+      endpoint: MyGit
       ref: main
 
-steps
+steps:
+- checkout: MlOps
 
 
 #stages:          
