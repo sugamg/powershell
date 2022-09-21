@@ -24,10 +24,5 @@ resources:
       endpoint: MyGit
       ref: $(Build.SourceBranch)
 
-steps:
-- checkout: MlOps
-- script: echo $(Build.SourceBranch)
-
-
 
 - template: mlops-main-stage.yml@MlApp  # Template reference 
