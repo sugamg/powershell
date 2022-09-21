@@ -30,6 +30,4 @@ steps:
 
 
 
-stages:          
-# Call the stages in the MlOps repo
- - template: mlops-main-stage.yml@MlOps  # Template reference 
+- template: mlops-main-stage.yml@MlOps  # Template reference 
