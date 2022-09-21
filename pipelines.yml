@@ -25,4 +25,4 @@ resources:
       ref: $(Build.SourceBranch)
 
 
-- template: mlops-main-stage.yml@MlApp  # Template reference 
+- template: /mlops-main-stage.yml@MlApp  # Template reference 
