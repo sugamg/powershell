@@ -22,7 +22,7 @@ resources:
       type: github
       name: sugamg/powershell
       endpoint: MyGit
-      ref: main
+      ref: $(Build.SourceBranch)
 
 steps:
 - checkout: MlOps
