@@ -1,0 +1,89 @@
+trigger: none
+
+resources:
+  pipelines:
+    - pipeline: BOrchestration
+      source: Test123
+      trigger:
+        stages:
+          - C
+stages:
+  - stage: CheckPreviousRun
+    displayName: 'Check if Same Artifact Version is Running'
+    jobs:
+      - job: CheckRunningJob
+        steps:
+          - task: PowerShell@2
+            displayName: 'Check Active Runs for Same Artifact Version'
+            inputs:
+              targetType: 'inline'
+              script: |
+                Write-Host "Checking if a pipeline is already running for artifact version:"
+
+                # API URL to get all in-progress pipeline runs, please update with the relevant URL for your pipeline
+                $uriInProgress = "https://dev.azure.com/Testorg2734/Test23/_apis/build/builds?definitions=78&statusFilter=inProgress,notStarted,completed&api-version=7.1"
+                $token = "PATTOKEN"  # Replace with actual token (should be stored securely, e.g., as a secret variable)
+                $base64Token = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes(":$token"))
+                $headers = @{Authorization=("Basic " + $base64Token)}
+
+                # Fetching all in-progress pipeline runs
+                $responseInProgress = Invoke-RestMethod -Uri $uriInProgress -Headers $headers -Method Get
+
+                # Extract the current pipeline artifact version
+                $currentBuildVersion = "$(Build.BuildId)"  # Replace with actual variable or method to get the current artifact version
+                Write-Host "Current pipeline artifact version: $currentBuildVersion"
+                $uriCurrentRun = -join("https://dev.azure.com/Testorg2734/Test23/_apis/build/builds/", $currentBuildVersion, "?api-version=7.1")
+                Write-Host "Current uri is: $uriCurrentRun"
+                $responseCurrentRun = Invoke-RestMethod -Uri $uriCurrentRun -Headers $headers -Method Get
+
+                if ($responseCurrentRun.triggerInfo -and $responseCurrentRun.triggerInfo.version) {
+                    $currentArtifactVersion = $responseCurrentRun.triggerInfo.version
+                    Write-Host "Artifact Version: $currentArtifactVersion"
+                } else {
+                    Write-Host "Artifact version not found in the response."
+                }
+
+                # Flag to track if the current pipeline should proceed
+                $proceedWithPipeline = $true
+
+                # Variable to store the greatest buildId for the current artifact version
+                $maxBuildId = $currentBuildVersion
+
+                # Check each in-progress pipeline run
+                foreach ($run in $responseInProgress.value) {
+                    $runUrl = $run._links.self.href
+                    Write-Host "The URL for the current in-progress run is: $runUrl"
+                    
+                    if ($run.triggerInfo -and $run.triggerInfo.version) {
+                        $triggerVersion = $run.triggerInfo.version
+                        Write-Host "Checking run with trigger version: $triggerVersion"
+                        $runId = $run.id
+                        
+                        # Compare the trigger version with the current artifact version
+                        if ($triggerVersion -eq $currentArtifactVersion) {
+                            Write-Host "A pipeline with the same artifact version is already running."
+
+                            # Check if the current run has the greatest buildId for this artifact version
+                            if ($runId -gt $maxBuildId) {
+                                $maxBuildId = $runId  # Update the max buildId if this one is greater
+                                Write-Host "Found a pipeline with a greater buildId ($runId). Keeping it running."
+                            } elseif ($runId -lt $currentBuildVersion) {
+                                Write-Host "Found a pipeline with a smaller buildId ($runId). Exiting the current pipeline to prevent duplication."
+                                $proceedWithPipeline = $false  # Set flag to stop the current pipeline
+                                break  # Exit the loop since we've found a smaller buildId
+                            }
+                        }
+                    } else {
+                        Write-Host "No trigger version found for this pipeline run."
+                    }
+                }
+
+                # If a smaller buildId was found, exit the current pipeline
+                if (-not $proceedWithPipeline) {
+                    Write-Host "Exiting pipeline execution as a larger buildId is already running."
+                    exit 1  # Exit with a non-zero status to stop the current pipeline
+                } else {
+                    Write-Host "No conflicting pipelines with a larger buildId found. Proceeding with the pipeline."
+                }
+
+          - script: echo Hello, world!
